@@ -16,8 +16,8 @@ func SelectWord(s string) []string { // function that selects a random word from
 	mot := list[rand.Intn(len(list)-1)]
 	run := []rune(mot)
 	str := []string{}
-	for i := 0; i < len(mot)-1; i++ {
-		str = append(str, string(run[i]))
+	for _, i := range run {
+		str = append(str, string(i))
 	}
 	return str
 }
