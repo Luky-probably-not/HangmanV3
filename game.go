@@ -53,7 +53,7 @@ func Turn(s, answer []string) ([]string, int, string) { // function that handles
 	if input == "+" {
 		os.Exit(0)
 	}
-	l := check(input, answer)
+	l := Check(input, answer)
 	if len(l) == 0 {
 		fmt.Printf("You type %s, \033[1;31mWrong !\033[0m\n \n", input)
 		cd = -1
@@ -67,7 +67,7 @@ func Turn(s, answer []string) ([]string, int, string) { // function that handles
 	return s, cd, string(input)
 }
 
-func check(s string, answer []string) []int { //function that checks the presence of the entered letter in the word
+func Check(s string, answer []string) []int { //function that checks the presence of the entered letter in the word
 	l := []int{}
 	for i := 0; i < len(answer); i++ {
 		if s == answer[i] {
